@@ -13,3 +13,4 @@ bitshifting_practice-test-*
 *.o
 *.obj
 *.lst
+*.pdb
