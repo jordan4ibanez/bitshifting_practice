@@ -4,7 +4,7 @@ import std.stdio;
 void main() {
     // We have our base value
     // Many values in 1 memory address
-	uint dataPack = 0;
+    uint dataPack = 0;
 
     /*
     Represent it in literal bits like so
