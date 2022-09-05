@@ -205,6 +205,7 @@ ushort getBlockID(uint input) {
 // Note: we are doing a bit modification via reassembly!
 // Every component that changes must get the other parts to have a correct new value
 void setRotation(ref uint input, ubyte newRotation) {
+    overflow4Bit(newRotation);
     ubyte naturalLight = getNaturalLight(input);
     ubyte torchLight = getTorchLight(input);
     ubyte blockState = getBlockState(input);
@@ -212,6 +213,7 @@ void setRotation(ref uint input, ubyte newRotation) {
     input = reassemble(newRotation, naturalLight, torchLight, blockState, blockID);
 }
 void setNaturalLight(ref uint input, ubyte newNaturalLight) {
+    overflow4Bit(newNaturalLight);
     ubyte rotation = getRotation(input);
     ubyte torchLight = getTorchLight(input);
     ubyte blockState = getBlockState(input);
@@ -219,6 +221,7 @@ void setNaturalLight(ref uint input, ubyte newNaturalLight) {
     input = reassemble(rotation, newNaturalLight, torchLight, blockState, blockID);
 }
 void setTorchLight(ref uint input, ubyte newTorchLight) {
+    overflow4Bit(newTorchLight);
     ubyte rotation = getRotation(input);
     ubyte naturalLight = getNaturalLight(input);
     ubyte blockState = getBlockState(input);
@@ -226,6 +229,7 @@ void setTorchLight(ref uint input, ubyte newTorchLight) {
     input = reassemble(rotation, naturalLight, newTorchLight, blockState, blockID);
 }
 void setBlockState(ref uint input, ubyte newBlockState) {
+    overflow4Bit(newBlockState);
     ubyte rotation = getRotation(input);
     ubyte naturalLight = getNaturalLight(input);
     ubyte torchLight = getTorchLight(input);
