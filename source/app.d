@@ -1,6 +1,4 @@
 import std.stdio;
-import std.bitmanip;
-
 
 // Welcome to my mini bitshifting tutorial in D, have fun
 void main() {
