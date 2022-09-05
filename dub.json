@@ -1,0 +1,9 @@
+{
+	"authors": [
+		"jordan4ibanez"
+	],
+	"copyright": "Copyright © 2022, jordan4ibanez",
+	"description": "Bitshifting in D practice",
+	"license": "MIT",
+	"name": "bitshifting_practice"
+}

@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/bitshifting_practice
+bitshifting_practice.so
+bitshifting_practice.dylib
+bitshifting_practice.dll
+bitshifting_practice.a
+bitshifting_practice.lib
+bitshifting_practice-test-*
+*.exe
+*.o
+*.obj
+*.lst
